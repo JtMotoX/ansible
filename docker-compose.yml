@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+    ansible:
+        build: ./build
+        image: jonathaf/ansible
+        container_name: ansible
+        hostname: ansible
+        restart: always
+        working_dir: /host
+        volumes:
+            - ~:/host
+            - ~/.ssh:/root/.ssh
+            - ./ansible.cfg:/root/.ansible.cfg
+            - ./persistent_volume:/persistent_volume

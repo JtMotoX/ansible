@@ -1,0 +1,13 @@
+export LS_OPTIONS='--color=auto'
+alias ls='ls $LS_OPTIONS'
+alias ll='ls $LS_OPTIONS -l'
+alias l='ls $LS_OPTIONS -lA'
+
+#PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u:\[\033[01;34m\]\W\[\033[00m\]\$ '
+PS1='\[\e[1;36m\]${debian_chroot:+($debian_chroot)}\u\[\e[0m\]@\[\e[1;34m\]\h\[\e[0m\]:\[\e[0;33m\]\W\[\e[1;35m\] \$\[\e[0m\] '
+
+# THIS ADDS SLASH TO SYMBOLIC LINK AUTOCOMPLETE
+bind 'set mark-symlinked-directories on'
+
+export ANSIBLE_SSH_PIPELINING=TRUE
+export USE_CONNECTPERSIST=TRUE

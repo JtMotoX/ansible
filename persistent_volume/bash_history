@@ -1,0 +1,169 @@
+ll /tmp/
+ll -a /root/
+cat .bash_history 
+ll -a /root/
+cat .bash_history
+ll -a /root/
+cat /persistent_volume/bash_history
+exit
+ls -la /root/
+cat /root/.bash_history 
+exit
+exit
+cd OneDrive\ -\ NetApp\ Inc/git_repos/ngdc/ansible-restructure/
+ansible-playbook ./playbooks/ngdc_workspace.yml -i ../provisioning-sample/openshift/inventory --vault-password-file /tmp/vault_files/vault_pass -u root -c ssh -e appcode=jjj -e appdescription="Jonathan Testing" -e applicationname="Jonathan App" -e costcenter="010-9238" -e development_owner_id=jonathaf -e requestor_id=jonathaf -e support_owner_id=jonathaf
+exit
+ll
+exit
+echo ANSIBLE_SSH_PIPELINE
+echo USE_CONNECTPERSIST
+echo $USE_CONNECTPERSIST
+ll
+cd OneDrive\ -\ NetApp\ Inc/git_repos/ngdc/devexp-engg/ansible-restructure/
+ll
+exit
+cd OneDrive\ -\ NetApp\ Inc/git_repos/ngdc/devexp-engg/ansible-restructure/
+ansible-playbook ./playbooks/ngdc_dataspace.yml -i ../../setup/managed-hosting-inventory/enterprise-stg.txt --vault-password-file /tmp/vault_files/vault_pass -u root -c ssh -e appcode=jjj -e dataspace_name=jjj-dbaas-mongodb1 -e product_catalog_name=MongoDB -e repo_name=dbaas-mongodb1 -e size='1'
+ansible-playbook ./playbooks/ngdc_hostspace.yml -i ../../setup/managed-hosting-inventory/enterprise-stg.txt --vault-password-file /tmp/vault_files/vault_pass -u root -c ssh -e appcode=jjj -e appdescription="Jonathan Testing" -e applicationname="Jonathan App" -e costcenter="010-9238" -e development_owner_id=jonathaf -e requestor_id=jonathaf -e support_owner_id=davidf1 -e customer_facing=External -e hostspace_landscape=stage -e hostspace_landscape_seqnum=2 -e hostspace_size=Medium -e workspace_name=jjj-workspace
+ansible-playbook ./playbooks/ngdc_product_catalog.yml -i ../../provisioning-sample/openshift/inventory --vault-password-file /tmp/vault_files/vault_pass -u root -c ssh -e appcode=jjj -e checkout_input=master -e product_catalog_name=springboot -e repo_name=springboot-test1
+git
+exit
+cd OneDrive\ -\ NetApp\ Inc/git_repos/ngdc/devexp-engg/ansible-restructure/
+ll
+ll ../../setup/managed-hosting-inventory/enterprise-stg.txt 
+ansible-playbook ./playbooks/ngdc_workspace.yml -i ../../setup/managed-hosting-inventory/enterprise-stg.txt --vault-password-file /tmp/vault_files/vault_pass -u root -c ssh -e appcode=jjj -e appdescription="Jonathan Testing" -e applicationname="Jonathan App" -e costcenter="010-9238" -e development_owner_id=jonathaf -e requestor_id=jonathaf -e support_owner_id=davidf1
+ssh root@vmwpssapp09-stg.corp.netapp.com
+ssh root@vmwpssapp09-stg.corp.netapp.com
+ssh root@vmwpssapp09-stg.corp.netapp.com
+ansible-playbook ./playbooks/ngdc_workspace.yml -i ../../provisioning-sample/openshift/inventory --vault-password-file /tmp/vault_files/vault_pass -u root -c ssh -e appcode=jjj -e appdescription="Jonathan Testing" -e applicationname="Jonathan App" -e costcenter="010-9238" -e development_owner_id=jonathaf -e requestor_id=jonathaf -e support_owner_id=davidf1
+ansible-playbook ./playbooks/ngdc_hostspace.yml -i ../../provisioning-sample/openshift/inventory --vault-password-file /tmp/vault_files/vault_pass -u root -c ssh -e appcode=jjj -e appdescription="Jonathan Testing" -e applicationname="Jonathan App" -e costcenter="010-9238" -e development_owner_id=jonathaf -e requestor_id=jonathaf -e support_owner_id=davidf1 -e customer_facing=External -e hostspace_landscape=stage -e hostspace_landscape_seqnum=1 -e hostspace_size=Medium -e workspace_name=jjj-workspace
+ansible-playbook ./playbooks/ngdc_dataspace.yml -i ../../setup/managed-hosting-inventory/enterprise-stg.txt --vault-password-file /tmp/vault_files/vault_pass -u root -c ssh -e appcode=jjj -e dataspace_name=jjj-dbaas-mongodb1 -e product_catalog_name=MongoDB -e repo_name=dbaas-mongodb1 -e size='1'
+ansible-playbook ./playbooks/ngdc_dataspace.yml -i ../../setup/managed-hosting-inventory/enterprise-stg.txt --vault-password-file /tmp/vault_files/vault_pass -u root -c ssh -e appcode=jjj -e dataspace_name=jjj-dbaas-mongodb1 -e product_catalog_name=MongoDB -e repo_name=dbaas-mongodb1 -e size='1'
+ansible-playbook ./playbooks/ngdc_dataspace.yml -i ../../provisioning-sample/openshift/inventory --vault-password-file /tmp/vault_files/vault_pass -u root -c ssh -e appcode=jjj -e dataspace_name=jjj-dbaas-mongodb1 -e product_catalog_name=MongoDB -e repo_name=dbaas-mongodb1 -e size='1'
+ansible-playbook ./playbooks/ngdc_dataspace.yml -i ../../provisioning-sample/openshift/inventory --vault-password-file /tmp/vault_files/vault_pass -u root -c ssh -e appcode=jjj -e dataspace_name=jjj-dbaas-mongodb2 -e product_catalog_name=MongoDB -e repo_name=dbaas-mongodb2 -e size='1'
+exit
+ansible --version
+apt update
+apt remove ansible
+apt-cache policy ansible
+apt-cache policy ansible
+sudo apt-get install software-properties-common
+apt-get install software-properties-common
+apt-add-repository ppa:ansible/ansible
+apt-get update
+exit
+ansible --version
+apt update && apt remove ansible -v
+apt install software-properties-common
+apt-add-repository ppa:ansible/ansible -y
+exit
+ansible --version
+apt update && apt remove ansible -t
+apt update && apt remove ansible -y
+cat /etc/apt/sources.list
+grep 'ansible' /etc/apt/* -r
+cat /etc/*res*
+cat /etc/*release*
+exit
+deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main
+cat /etc/apt/sources.list
+echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main" /etc/apt/sources.list.d/ansible.list
+echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main" >/etc/apt/sources.list.d/ansible.list
+cat /etc/apt/sources.list.d/ansible.list 
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
+apt-get update
+apt-cache madison ansible
+apt-cache policy ansible
+exit
+./ba
+apt-get update && apt remove ansible -y
+apt install make git make python-setuptools gcc python-dev libffi-dev libssl-dev python-packaging -y
+cd /usr/local/src/
+git clone git://github.com/ansible/ansible.git
+cd ansible
+git branch -a | grep stable
+git branch -a | grep 2.5
+git branch -a | grep 2.5
+git branch -a
+git checkout stable-2.5
+source ./hacking/env-setup
+make && make install
+ansible --version
+exit
+apt-get update && apt remove ansible -y
+apt-get install python-pip python-dev
+pip install ansible==22222222
+pip install ansible==2.5.1
+ansible --version
+exit
+exit
+ansible --version
+exit
+ansible --version
+exit
+ll
+ll netapp/
+exit
+exit
+ll
+ll
+cd netapp 
+ls netapp 
+exit
+cd OneDrive\ -\ NetApp\ Inc/git_repos/ngdc/devexp-engg/ansible-restructure/
+clear
+reset && ansible-playbook ./playbooks/ngdc_dataspace.yml -i ../../provisioning-sample/openshift/inventory --vault-password-file /tmp/vault_files/vault_pass -u root -c ssh -e appcode=jjj -e appdescription="Jonathan Testing" -e applicationname="JonathanTesting" -e costcenter="010-9238" -e dataspace_name=jjj-dbaas-mongodb1 -e product_catalog_name=MongoDB -e repo_name=dbaas-mongodb1 -e size='1' -e disable_vsts_policy=true
+cd ../../provisioning-sample/
+ll
+cd openshift/
+ll
+vim inventory
+ssh dwfostst3.ncloudpoc.netapp.com
+oc login
+oc login https://k8s-lab1-console.ncloudpoc.netapp.com
+apt install oc
+exit
+exit
+ll
+ll netapp 
+cd netapp 
+cd netapp
+exit
+pwd
+ll
+ll /Users/jonathaf/
+ll
+ll /Users/jonathaf/netapp
+ll /Users/jonathaf/netapp/
+exit
+ll
+exit
+pwd
+cd netapp/
+ll
+cd git_repos/ngdc/devexp-engg/ansible-restructure/
+ll
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u:\[\033[01;34m\]\W\[\033[00m\]\$ '
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u:\[\033[01;34m\]\W\[\033[00m\]\$f '
+hostname
+exit
+ll jonathaf/netapp/git_repos/ngdc/
+cd  jonathaf/netapp/git_repos/ngdc/
+pwd
+exit
+hostname
+pwd
+cd /Users/jonathaf/netapp/git_repos/ngdc/
+pwd
+PS1=\[\e[1;36m\]${debian_chroot:+($debian_chroot)}\u\[\e[0m\]@\[\e[1;34m\]\h\[\e[0m\]:\[\e[0;33m\]\w\[\e[1;35m\] \$\[\e[0m\]
+exit
+exit
+exit
+exit
+ll
+cd netapp/
+ll
+exit
+cd netapp/git_repos/ngdc/devexp-engg/ansible-restructure/
+ll
+exit

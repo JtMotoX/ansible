@@ -3,6 +3,7 @@ cd "$(dirname "$0")"
 
 DATADIR=/root/.local/share/code-server-data
 EXTDIR=/root/.local/share/code-server-extensions
+DISABLE_TELEMETRY=true
 
 $(pwd)/stop-code-server.sh
 

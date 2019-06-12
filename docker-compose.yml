@@ -11,14 +11,14 @@ services:
         environment:
             TZ: "America/Los_Angeles"
         ports:
-            - "8443:8443"
+            - "127.0.0.1:8443:8443"
         working_dir: /host
         volumes:
             - ~:/host
             - ~/.ssh:/root/.ssh
             - ./ansible.cfg:/root/.ansible.cfg
             - ./persistent_volume:/persistent_volume
-            # VSC FILES
+            # VSC FILES FOR MAC
             - ~/Library/Application Support/Code:/local-vsc/Code
             - ~/.vscode/extensions:/local-vsc/extensions
             - ~/Library/Caches/com.microsoft.VSCode.ShipIt:/local-vsc/com.microsoft.VSCode.ShipIt

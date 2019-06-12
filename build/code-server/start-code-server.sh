@@ -4,7 +4,7 @@ cd "$(dirname "$0")"
 DATADIR=/root/.local/share/code-server-data
 EXTDIR=/root/.local/share/code-server-extensions
 
-./stop-code-server.sh
+$(pwd)/stop-code-server.sh
 
 echo "Synchronizing settings and extensions from local vsc installation . . ."
 
@@ -22,7 +22,7 @@ rsync -a --delete /local-vsc/com.microsoft.VSCode.ShipIt/update.*/Visual\ Studio
 
 # START CODE-SERVER
 echo "starting code-server"
-./code-server \
+$(pwd)/code-server \
     --user-data-dir "$DATADIR" \
     --extensions-dir "$EXTDIR" \
     /host/

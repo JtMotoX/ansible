@@ -26,4 +26,5 @@ echo "starting code-server"
 $(pwd)/code-server \
     --user-data-dir "$DATADIR" \
     --extensions-dir "$EXTDIR" \
+    $1 \
     /host/

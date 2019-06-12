@@ -22,3 +22,4 @@ services:
             - ~/Library/Application Support/Code:/local-vsc/Code
             - ~/.vscode/extensions:/local-vsc/extensions
             - ~/Library/Caches/com.microsoft.VSCode.ShipIt:/local-vsc/com.microsoft.VSCode.ShipIt
+        command: "--no-auth"

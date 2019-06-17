@@ -14,9 +14,9 @@ RUN apt update && apt install -y \
         dnsutils \
         procps \
         openssh-client \
-	    jq \
+        jq \
         python-pip \
-	    git \
+        git \
         rsync \
         net-tools
 
@@ -46,14 +46,29 @@ ENV PROMPT_COMMAND='echo -ne "\033]0;Docker | ansible\007"'
 
 # INSTALL CODE SERVER
 RUN cd /tmp/ && \
-    wget --progress=dot:mega https://github.com/cdr/code-server/releases/download/1.1140-vsc1.33.1/code-server1.1140-vsc1.33.1-linux-x64.tar.gz && \
-    tar -xvf code-server*.tar* && \
-    rm -f code-server*.tar* && \
+    wget --progress=dot:mega https://github.com/cdr/code-server/releases/download/1.1140-vsc1.33.1/code-server1.1140-vsc1.33.1-linux-x64.tar.gz -O code-server.tar.gz && \
     mkdir -p /root/code-server && \
-    mv code-server*/code-server /root/code-server/ && \
-    rm -rf code-server*
+    tar -xvf code-server.tar.gz -C /root/code-server/ --strip-components 1 && \
+    rm -rf code-server.tar.gz
 COPY code-server/* /root/code-server/
-    
+
+# INSTALL JAVA FOR GIT-CREDENTIAL-MANAGER
+RUN apt-get update && apt-get install -y \
+        openjdk-11-jre-headless \
+        ant \
+        ca-certificates-java \
+        && \
+    apt-get clean && \
+    update-ca-certificates -f && \
+    export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
+
+# INSTALL GIT-CREDENTIAL-MANAGER
+RUN git config --global --unset-all credential.helper; exit 0
+RUN cd ~ && \
+    wget --progress=dot:mega https://github.com/Microsoft/Git-Credential-Manager-for-Mac-and-Linux/releases/download/git-credential-manager-2.0.4/git-credential-manager-2.0.4.jar -O git-credential-manager.jar && \
+    java -jar git-credential-manager.jar install && \
+    git config --global --list | grep '^credential\.helper=' && \
+    git config --global credential.canFallBackToInsecureStore true
 
 COPY ./code-server /root/code-server
 #ENTRYPOINT ["tail", "-f", "/dev/null"]
